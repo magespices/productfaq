@@ -1,0 +1,23 @@
+<?php
+/**
+ * Created by Q-Solutions Studio
+ * Date: 16.03.2020
+ *
+ * @category    Magespices
+ * @package     Magespices_Faq
+ * @author      Maciej Buchert <maciej@qsolutionsstudio.com>
+ */
+?>
+<?php /** @var \Magespices\Faq\Block\Product\Tab\Faq $block */?>
+<h2><?= $block->getTitle(); ?></h2>
+<?php /** @var \Magespices\Faq\Model\Question $faq */ ?>
+<div class="faq" data-mage-init='{"faq": {}}'>
+    <?php foreach($block->getProductFaq() as $faq): ?>
+        <div class="question">
+            <h3 style="cursor: pointer;"><?= $block->processContent($faq->getData(\Magespices\Faq\Model\Question::QUESTION)) ?></h3>
+            <div class="answer" style="display: none;">
+                <?= $block->processContent($faq->getData(\Magespices\Faq\Model\Question::ANSWER)) ?>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>

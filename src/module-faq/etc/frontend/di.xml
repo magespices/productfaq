@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ * Created by Q-Solutions Studio
+ * Date: 16.03.2020
+ *
+ * @category    Magespices
+ * @package     Magespices_Faq
+ * @author      Maciej Buchert <maciej@qsolutionsstudio.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magespices\Faq\Block\Product\Tab\Faq">
+        <arguments>
+            <argument name="templateProcessor" xsi:type="object">Magento\Widget\Model\Template\Filter</argument>
+        </arguments>
+    </type>
+</config>

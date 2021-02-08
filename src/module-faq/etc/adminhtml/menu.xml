@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ * Created by Q-Solutions Studio
+ * Date: 16.03.2020
+ *
+ * @category    Magespices
+ * @package     Magespices_Faq
+ * @author      Maciej Buchert <maciej@qsolutionsstudio.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Magespices_Faq::menu" title="FAQ" module="Magespices_Faq" sortOrder="50" resource="Magespices_Faq::management" dependsOnConfig="faq/general/enabled" />
+        <add id="Magespices_Faq::management" title="Manage questions" module="Magespices_Faq" sortOrder="1" resource="Magespices_Faq::management" parent="Magespices_Faq::menu" action="magespices/faq/index" />
+    </menu>
+</config>

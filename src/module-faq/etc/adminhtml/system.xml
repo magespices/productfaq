@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ * Created by Q-Solutions Studio
+ * Date: 16.03.2020
+ *
+ * @category    Magespices
+ * @package     Magespices_Faq
+ * @author      Maciej Buchert <maciej@qsolutionsstudio.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magespices" translate="label" sortOrder="200">
+            <label>Qsolutions Studio</label>
+        </tab>
+        <section id="faq" translate="label" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>FAQ</label>
+            <tab>magespices</tab>
+            <resource>Magespices_Faq::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Tab title</label>
+                    <validate>required-entry</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

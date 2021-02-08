@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ * Created by Q-Solutions Studio
+ * Date: 16.03.2020
+ *
+ * @category    Magespices
+ * @package     Magespices_Faq
+ * @author      Maciej Buchert <maciej@qsolutionsstudio.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="faq_question_data_source" xsi:type="string">Magespices\Faq\Model\ResourceModel\Bonuses\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Magespices\Faq\Model\ResourceModel\Bonuses\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magespices_faq_question</argument>
+            <argument name="resourceModel" xsi:type="string">Magespices\Faq\Model\ResourceModel\Question</argument>
+        </arguments>
+    </virtualType>
+</config>

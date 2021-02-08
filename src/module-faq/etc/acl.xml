@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ * Created by Q-Solutions Studio
+ * Date: 16.03.2020
+ *
+ * @category    Magespices
+ * @package     Magespices_Faq
+ * @author      Maciej Buchert <maciej@qsolutionsstudio.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magespices_Faq::Faq" title="FAQ" sortOrder="100">
+                    <resource id="Magespices_Faq::config" title="Configuration" sortOrder="10" />
+                    <resource id="Magespices_Faq::management" title="Management" sortOrder="20" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
