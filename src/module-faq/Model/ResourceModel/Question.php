@@ -10,8 +10,7 @@
 
 namespace Magespices\Faq\Model\ResourceModel;
 
-use \Magento\Framework\Model\ResourceModel\Db\AbstractDb;
-use Magespices\Faq\Setup\InstallSchema;
+use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
 /**
  * Class Question
@@ -19,9 +18,11 @@ use Magespices\Faq\Setup\InstallSchema;
  */
 class Question extends AbstractDb
 {
+    /** @var string  */
+    const FAQ_QUESTION_TABLE = 'magespices_faq_question';
+
     public function _construct(): void
     {
-        $this->_init(InstallSchema::Magespices_QUESTION_TABLE_NAME, \Magespices\Faq\Model\Question::ENTITY_ID);
+        $this->_init(self::FAQ_QUESTION_TABLE, \Magespices\Faq\Model\Question::ENTITY_ID);
     }
 }
-
