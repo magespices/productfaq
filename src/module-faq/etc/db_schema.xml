@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="magespices_faq_question"  comment="Faq Question Table">
+		<column name="entity_id"  nullable="false" identity="true" unsigned="true" xsi:type="int" comment="Entity Id" />
+		<column name="question" nullable="false"  length="255" nullable="false" xsi:type="text" comment="Question" />
+		<column name="answer" nullable="false"  length="255" nullable="false" xsi:type="text" comment="Answer" />
+		<column name="sort_order" nullable="false" xsi:type="int"  comment="Sort Order" />
+		<column name="product_id" nullable="false"  length="255" nullable="false" xsi:type="text" comment="Product ID" />
+		<constraint referenceId="PRIMARY" xsi:type="primary">
+			<column name="entity_id"/>
+		</constraint>
+	</table>
+</schema>
